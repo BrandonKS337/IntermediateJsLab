@@ -2,20 +2,32 @@
 // the first character of each word changed into a capital letter, as in the example 
 // below. Test it with different strings.
 
-const toTitleCase = (phrase) => {
-    return phrase
+// const toTitleCase = (phrase) => {
+//     return phrase
+//       .toLowerCase()
+//       .split(' ')
+//       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+//       .join(' ');
+//   };
+  
+//   let result = toTitleCase('mary had a little');
+
+  // console.log(result)
+
+  const toTitleCase = (string) => {
+    return string
       .toLowerCase()
       .split(' ')
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' ');
-  };
+      .join(' ')
+  }
   
-  let result = toTitleCase('mary had a little');
-//   console.log(result);
+  let result = toTitleCase('i beLIeve in ALieNs')
+  console.log(result)
 
   //source = https://stackoverflow.com/questions/32589197/how-can-i-capitalize-the-first-letter-of-each-word-in-a-string-using-javascript
 // arrow functions "explained"  https://dotnettutorials.net/lesson/javascript-arrow-function/#:~:text=The%20arrow%20function%20was%20introduced%20in%20ECMAScript%206,any%20names%2C%20the%20arrow%20makes%20the%20syntax%20shorter.
-
+// https://www.w3schools.com/jsref/jsref_touppercase.asp
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -24,22 +36,22 @@ const toTitleCase = (phrase) => {
 // or the original text otherwise. 
 // b) Write another variant of the truncate function that uses a conditional operator.
 
-text_truncate = function(str, length, ending) {
-    if (length == null) {
-      length = 100;
-    }
-    if (ending == null) {
-      ending = '(...)';
-    }
-    if (str.length > length) {
-      return str.substring(0, length - ending.length) + ending;
-    } else {
-      return str;
-    }
-  };
-console.log(text_truncate('We are doing JS string exercises.'))
-console.log(text_truncate('We are doing JS string exercises.',19))
-console.log(text_truncate('We are doing JS string exercises.',15,'!!'))
+// text_truncate = function(str, length, ending) {
+//     if (length == null) {
+//       length = 100;
+//     }
+//     if (ending == null) {
+//       ending = '(...)';
+//     }
+//     if (str.length > length) {
+//       return str.substring(0, length - ending.length) + ending;
+//     } else {
+//       return str;
+//     }
+//   };
+// console.log(text_truncate('We are doing JS string exercises.'))
+// console.log(text_truncate('We are doing JS string exercises.',19))
+// console.log(text_truncate('We are doing JS string exercises.',15,'!!'))
 
 // source: https://www.w3resource.com/javascript-exercises/javascript-string-exercise-16.php
 
