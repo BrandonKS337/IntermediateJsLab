@@ -234,24 +234,101 @@ console.log('step 2', ourStack)*/
 ///Json slide 72
 
 // console.log(title4);
-const testObj = {
-    test: undefined,
-  title: "Menu",
-  height: 200,
-  width: 100,
-  something: {
-    first_name: "John",
-    last_name: "Doe",
-  },
-  items: ["Cake", "Donut"],
-  movies: ["Terminator"],
-  ourFunction(){
-    console.log('Hello')
-  }
-};
+// const testObj = {
+//     test: undefined,
+//   title: "Menu",
+//   height: 200,
+//   width: 100,
+//   something: {
+//     first_name: "John",
+//     last_name: "Doe",
+//   },
+//   items: ["Cake", "Donut"],
+//   movies: ["Terminator"],
+//   ourFunction(){
+//     console.log('Hello')
+//   }
+// };
 
-const stringy = JSON.stringify(testObj);
+// const stringy = JSON.stringify(testObj);
 
-const parse = JSON.parse(stringy)
+// const parse = JSON.parse(stringy)
 
-console.log(parse);
+// console.log(parse);
+
+
+/////////////////////////// w3schools.com array sort example: sort cars ==>>translated to JS
+// const cars = [
+//     {type: "volvo", year: 2016},
+//     {type: "Saab", year: 2001},
+//     {type: "BMW", year: 2010}
+// ];
+
+// cars.sort(function(a,b){
+//     return a.year - b.year});
+
+// displayCars();
+
+// function displayCars() {
+//     cars[0].type + "" + cars[0].year + "<br>" +
+//     cars[1].type + "" + cars[1].year + "<br>" +
+//     cars[2].type + "" + cars[2].year;
+// }
+
+// console.log(cars)
+
+////////////////////////////end example
+
+// const numbers = [45, 4, 9, 16, 25];
+// let txt = "";
+// numbers.forEach(myFunction);
+
+// function myFunction(value, index, array) {
+//   txt += value + "<br>";
+// }
+
+// console.log(txt)
+//Array map ex:
+// const numbers1 = [45, 4, 9, 16, 25];
+// const numbers2 = numbers1.map(myFunction);
+
+// function myFunction(value) {
+//   return value * 2;
+// }
+
+// console.log(numbers2)
+
+//JS array flatMap()
+
+// const myArr = [1, 2, 3, 4, 5, 6];
+// const newArr = myArr.flatMap((x) => x * 2);
+
+// console.log(newArr)
+
+//Array Filter
+// const numbers3 = [45, 4, 9, 16, 25];
+// const over18 = numbers3.filter(myFunction);
+// const under18 = numbers3.filter(myFunction2);
+
+
+///////////////////ASK ABOUT HOW TO IF ELSE this EXample from w3schools
+// function myFunction(value, index, array) {
+//   let value = 
+//     if value { x > 18},
+//   else {
+//     return value > 18
+//   }
+// function myFunction2(value) {
+//     return value < 18
+// }
+// console.log(under18)
+
+
+/////////////////////// EX: reduce()
+const numbers = [45, 4, 9, 16, 25];
+let sum = numbers.reduce(myFunction);
+
+function myFunction(total, value, index, array) {
+  return total + value;
+}
+console.log(sum)
