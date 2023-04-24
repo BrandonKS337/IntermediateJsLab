@@ -23,7 +23,7 @@
   }
   
   let result = toTitleCase('i beLIeve in ALieNs')
-  console.log(result)
+  // console.log(result)
 
   //source = https://stackoverflow.com/questions/32589197/how-can-i-capitalize-the-first-letter-of-each-word-in-a-string-using-javascript
 // arrow functions "explained"  https://dotnettutorials.net/lesson/javascript-arrow-function/#:~:text=The%20arrow%20function%20was%20introduced%20in%20ECMAScript%206,any%20names%2C%20the%20arrow%20makes%20the%20syntax%20shorter.
@@ -55,6 +55,24 @@
 
 // source: https://www.w3resource.com/javascript-exercises/javascript-string-exercise-16.php
 
+truncatedSentence = function(str, length, end) {
+  if (length ==null) {
+    length = 100;
+  }
+  if (end == null) {
+    end = '(...)';
+  }
+  if (str.length >length) {
+    return str.substring(0, length - end.length) + end
+  }
+  else {
+    return str
+  }
+}
+// console.log(truncatedSentence('This is Problem 2 of JS segment.'))
+// console.log(truncatedSentence('This is Problem 2 of JS segment.',20))
+// console.log(truncatedSentence('This is Problem 2 of JS segment.',15, '!!!'))
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -66,3 +84,5 @@
 // d) Write a function replaceMiddleAnimal(newValue) that replaces the value in the middle of the animals array with newValue 
 // e) Write a function findMatchingAnimals(beginsWith) that returns a new array containing all the animals that begin with the beginsWith string. 
 //   Try to make it work regardless of upper/lower case.
+
+const animals = ['Tiger', 'Giraffe']
